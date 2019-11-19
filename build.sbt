@@ -2,14 +2,15 @@ import sbt._
 import sbt.complete.Parser._
 import sbt.complete._
 
-name := """sos"""
+name := """sos-join"""
 
 version := "1.0-SNAPSHOT"
+
+enablePlugins(DockerPlugin)
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
 scalaVersion := "2.11.7"
-
 
 val webJars = Seq(
   "org.webjars.bower" % "bootstrap" % "4.1.0",
