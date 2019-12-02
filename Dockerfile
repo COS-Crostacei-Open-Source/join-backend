@@ -10,7 +10,5 @@ ADD . join-backend/
 
 WORKDIR join-backend/
 
-RUN mv backend-variables.conf conf/env/prod.conf \
-&& sbt stage
+RUN sbt stage
 
-CMD target/universal/stage/bin/sos -Dconfig.resource=env/prod.conf -Dhttp.port=9000 -Dlogger.resource=logback.xml -Dplay.evolutions.db.default.autoApply=true -Dplay.http.secret.key='QCY?tAnfk?aZ?iwrNwnxIlR6CTf:G3gf:90Latabg@5241ABR5W:1uDFN];Ik@n'
